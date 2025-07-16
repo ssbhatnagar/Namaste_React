@@ -1,0 +1,54 @@
+1. => React is a library why? 
+    because it can work independently in the smallest portion of the application the code written in app.jsx for heading2 will only be injected in root2 not anywhere else, but if it is a framework we need to use it every where 
+
+2. => createElement: it creates an object and it takes three parmeters in it the first parameter is the tag you want to create out of it like div, heading, paragraph. The second parameter takes the id, or any attribute you want to pass. The third parameter takes the value of child like in app.jsx we have added a child div to parent div using create element 
+
+3. => Render: render job is to take the object that we created and then create h1 tag and add that in root
+
+4. => NOTE:
+ * Let's create the structure given below it is having parent div which is having child div inside
+ * after that we have two siblings that are h1 and h2 that are inside the child
+ * to create sibblings use array [] and pass them in the array see the example in app.jsx
+
+<div id="parent">
+    <div id="child">
+        <h1>Im the h1 tag</h1>
+        <h2>Im the h2 tag</h2>
+    </div>
+</div>
+*/
+
+5. => NOTE:
+
+/**
+ * Now there is another question which arises that what if we have to create the below structure 
+ * 
+ * <div id="parent">
+    <div id="child">
+        <h1>Im the h1 tag</h1>
+        <h2>Im the h2 tag</h2>
+    </div>
+    <div id="child2">
+        <h1>Im the h1 tag</h1>
+        <h2>Im the h2 tag</h2>
+    </div>
+</div>
+
+If we create the code for above structure it will look like something that is given below which lloks Ugly that is why
+we have something called => JSX
+
+6. => what is package.json -> it is the configuration for NPM, why do we need it ? -> use to keep the version of all the dependencies required for the project
+
+7. what is a bundler => it bundels the application so that it can be moved to production ex webpack, parcel, vite. Create React App uses webpack behind the scene. 
+
+8. npm install -D parcel => this will install the parcel dependency but what is -D used in command ? -> so there are two types of dependencies one is dev dependency which is required while development the other is normal dependencies which can be used for production also, so here -D means we are installing the parcel as dev dependency. 
+
+9. if u take a look on the version of the parcel in package.json is starts with a symbol ^ (caret): using this symbol before the version means that we are allowing the npm to upgrade the parcel if there are minor updates in the new version like currently it is ^2.15.4 so if next few days the version changes to ^2.15.5 then it will be auomatically updates, but there is nother notation that we use which is ~ (tilde)  which means if we have major updates like 3.12.2 then it will auto update it. It is thus suggest to use caret (^) so that it can only be updated to minor new version.
+
+10. Package lock.json => it keep track of the exact version of the dependencies used in the project, it also keeps a hash to avoid the break of any version while using this on server. 
+
+11. we only installed parcel but node modules is having lots and lots of libraries why so ? -> because the parcel also needs some dependencies to work and those dependencies might need more dependencies to work this is called as TRANSITIVE DEPENDENCIES.
+
+12. npx command is used to execute a package 
+
+13. after using npx parcel index.html => it build a development build for our app and host it on local server

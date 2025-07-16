@@ -1,8 +1,3 @@
-/**
- * React is a library why? 
- * because it can work independently in the smallest portion of the application the code written below for heading2
- * will only be injected in root2 not anywhere else, but if it is a framework we need to use it every where 
- */
 const heading2 = React.createElement( // create element creates an object
     "h1",
     {id: "heading"}, // these are attributes
@@ -13,7 +8,7 @@ console.log(heading2) // this will give an object
 
 const root2 = ReactDOM.createRoot(document.getElementById("root2"));
 
-root2.render(heading2); // render job is to take the object that we created and then create h1 tag and add that in root 
+root2.render(heading2);  
 
 
 /**
