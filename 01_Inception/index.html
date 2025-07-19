@@ -7,24 +7,9 @@
     <title>Namaste React</title>
 </head>
 <body>
-    <div>This will stay as it is </div>
-    <div id="root"></div>
-    <div id="root2">
-        <!-- If The below p tag is kept then what will happen?
-        ANS: It will be REPLACED by the heading tag that is decalerd in App.jsx by root2.render -->
-        <!-- <p>Hi Shubham here</p> -->
+    <div id="root">
     </div>
-    <div id="root3"></div>
-    <div>This will stay as it is </div>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script>
-        const heading = document.createElement("h1");
-        heading.innerHTML = "Hello World from JavaScript"
-        const root = document.getElementById("root")
-        root.appendChild(heading);
-    </script>
-    <script src="./App.js"></script>
+    <script type="module" src="./App.js"></script>
 </body>
 </html>
  

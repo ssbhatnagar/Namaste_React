@@ -52,3 +52,26 @@ we have something called => JSX
 12. npx command is used to execute a package 
 
 13. after using npx parcel index.html => it build a development build for our app and host it on local server
+
+14. it is not a recomended way to use CDN linke because we are making useless calls to the CDN link and also we need to chamge the links in case the version of react changes
+
+15. Here is what parcel is doing for us  
+    1. creating dev build
+    2. creating local server
+    3. doing HMR- hot module replacement, is there is any change in code parcel updates it auomatically this is called 
+    as HMR, how parcel is doing it ? -> parcel is using a file watcher algorithm written in C++ which is looking after 
+    all the file changes going on, as soon as there is any change it will build it again. It is also caching results because 
+    of which its doing it faster
+    4. it does image optimization
+    5. it does minification, bundling and also compressing
+    6. its doing consistent hashing
+    7. differential bundling: support older browser
+    8. code splitting  
+    9. diagnostic
+    10. error handling
+    11. tree shaking: removes extra code 
+    12. different dev and production bundle
+    READ PARCEL DOCUMENTATION FOR INDEPTH
+
+16. Parcel converts the code in dist and that is used to host the code on the server and whenever the code is changed the page refresh happens from parcel-cache 
+    
