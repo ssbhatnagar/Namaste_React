@@ -27,6 +27,8 @@ const HeadingComponent = () =>(
     <TitleFunctionalComponent/> 
     {str} 
     {TitleElement}
+    {/* /This is how we can call too THIS IS AMAZING */}
+    {TitleFunctionalComponent()}
     <h1 className='heading'>This is comming from functional component</h1>
     </div>
 )
