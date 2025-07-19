@@ -2,7 +2,7 @@
   "devDependencies": {
     "parcel": "^2.15.4"
   },
-  "name": "01_inception",
+  "name": "03_laying_foundation",
   "version": "1.0.0",
   "description": "second episode",
   "dependencies": {
