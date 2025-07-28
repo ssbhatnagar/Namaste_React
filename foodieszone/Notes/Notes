@@ -1,0 +1,28 @@
+1. JSX is needed to get rid of the clumsy code of react.createElement, using react.createElement makes a mess 
+to read the code, it is not developer friendly at all.
+
+2. JSX is NOT html inside Javascript, JSX is html like syntax. 
+
+3. JSX is just a syntax react element is an object
+
+4. If we write const jsxHeading = <h1 id='heading'> This heading is using JSX</h1> in browser it will not understand this piece of
+code because this is not a javascript code, but this code is getting transpiled by Parcel before it goes to the JS engine
+then JS engine receive the code that browsers can unbderstand.
+
+5. Does Parcel itself is responsible for the transpikation? -> NO Parcel uses BABEL (normal JS package in node modules)
+for the transpilation
+
+6. The JSX provided is converted into React.createElement (object) by babel and then it is converted into HTML element (render)
+READ BABEL DOCUMENTATION
+
+7. if u need to give attributes in JSX it is given in JSX EXPLORE ALL KIND OF ATTRIBUTES 
+
+8. if you are writing JSX in single line it if valid, but if you want to write multiple lines then it needs to get
+wrapped inside brackets (). 
+
+9. Component is the Javascript function returning JSX, it is the smallest piece of code.
+
+10. any JS code can beadded into compoent using {}
+
+11. Read about cross scripting attack -> what ever code is passes inside the {} in JSX first it is sanitized by JSX
+and then it runs. 
