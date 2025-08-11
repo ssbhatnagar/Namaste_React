@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // Notice the /client for React 18+
+import './index.css'
 
 /**
  * Here is the basic structure of our food ordering app named as FooodieZone
@@ -27,11 +28,30 @@ const Header = () =>{
             </div>
             <div className="nav-items">
                 <ul>
-                    <li>HOME</li>
-                    <li>ABOUT US</li>
-                    <li>CONTACT US</li>
-                    <li>CART</li>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
                 </ul>
+            </div>
+        </div>
+    )
+}
+
+const RestaurantCard = () =>{
+    return(
+        <div className= "res-card">
+            <h3>meghna Foods</h3>
+        </div>
+    )
+}
+
+const Body = () => {
+    return(
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="res-container">
+            <RestaurantCard/>
             </div>
         </div>
     )
@@ -41,6 +61,7 @@ const AppLayout = () =>{
     return (
         <div className ="app">
             <Header/>
+            <Body/>
         </div>
     )
 }
