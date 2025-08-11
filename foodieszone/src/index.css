@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+}
+
+.logo{
+    width: 10px;
+
+}
+.logo-container{
+    background-color: black;
+}

@@ -23,12 +23,12 @@ const Header = () =>{
     return(
         <div className="header">
             <div className="logo-container">
-                <img className="logo" src="./src/assets/fooodie-logo.png"/>
+                <img className="logo" src="./src/assets/foodiezone-logo.jfif"/>
             </div>
             <div className="nav-items">
                 <ul>
                     <li>HOME</li>
-                    <li>About Us</li>
+                    <li>ABOUT US</li>
                     <li>CONTACT US</li>
                     <li>CART</li>
                 </ul>
