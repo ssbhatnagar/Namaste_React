@@ -1,28 +1,70 @@
-.header{
+/* Add this at the top of your CSS file */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* A good practice to define font */
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
+    margin: 10px; /* Add some margin for visual separation */
 }
 
-.logo{
+.logo {
     width: 100px;
+}
 
+.nav-items {
+    padding: 0 20px;
 }
-.nav-items{
-    padding: 0px 20px;
-}
-.nav-items > ul{
+
+.nav-items > ul {
     font-size: 24px;
     display: flex;
     list-style-type: none;
+    margin: 0; /* Remove default ul margin */
 }
-.nav-items > ul > li{
+
+.nav-items > ul > li {
     padding: 10px;
     margin: 10px;
-
 }
-.res-card{
-    width: 200px;
-    height: 300px;
+
+/* Updated section for the cards */
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:baseline ; /* Center the cards if they don't fill the row */
+    gap: 6px; /* Use gap for consistent spacing between cards */
+    padding: 15px; /* Add padding to the container to create space from the edges */
+}
+
+.res-card {
+    width: 200px; /* The width of the card */
+    padding: 5px;
+    border: 1px solid #e0e0e0; /* A subtle border looks better than a blank space */
+    border-radius: 5px; /* Add a slight curve to the corners */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.res-card:hover {
     border: 1px solid black;
+    cursor: pointer;
+    transform: scale(1.03); /* A subtle zoom on hover is a good user experience */
+}
+
+.search {
+    padding: 10px 20px;
+}
+
+.res-logo {
+    width: 100%; /* Make the image responsive to its container */
+    height: 150px;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    border-radius: 5px;
 }
