@@ -6,6 +6,12 @@ import { useState } from "react";
 
 const Body = () => {
 
+    // useState take the input as array it is same as provding input like below
+    // const arr = useState(resList);
+    // const listOfRestaurant = arr[0];
+    // const setListOfRestaurant = arr[1]
+
+    // this is how we destructure the array and provide the input
    const [listOfRestaurant, setListOfRestaurant] = useState(resList);
     
 
