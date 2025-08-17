@@ -68,3 +68,8 @@ body {
     object-fit: cover; /* Ensures the image fills the space without distortion */
     border-radius: 5px;
 }
+
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+}
