@@ -1,9 +1,7 @@
 /* Add this at the top of your CSS file */
-* {
-    box-sizing: border-box;
-}
 
-body {
+
+.body {
     margin: 0;
     font-family: Arial, sans-serif; /* A good practice to define font */
 }
@@ -39,9 +37,9 @@ body {
 .res-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content:baseline ; /* Center the cards if they don't fill the row */
-    gap: 6px; /* Use gap for consistent spacing between cards */
+    gap: 10px; /* Use gap for consistent spacing between cards */
     padding: 15px; /* Add padding to the container to create space from the edges */
+    justify-content:space-between;
 }
 
 .res-card {
@@ -72,4 +70,26 @@ body {
 .filter-btn{
     margin: 10px;
     cursor: pointer;
+}
+
+.Shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    margin: 20px;
+    width: 200px;
+    height: 400px;
+    background-color: #E0E0E0;
+}
+
+.login{
+    padding: 0px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.filter{
+    display: flex;
 }

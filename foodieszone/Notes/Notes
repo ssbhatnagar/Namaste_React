@@ -51,3 +51,58 @@ For example, if you have a list of items with input fields and you reorder the l
 5.3 Unpredictable Behavior with Animations and Transitions:
 
 Animations and transitions that rely on stable component identities can behave unexpectedly when index keys are used, as React might not be able to correctly track the elements during these operations.
+
+---------------------------------------------------------------------------------------------------------------
+
+1. useEffect works after the rendering if dependency array is empty 
+
+2. Understanding the CORS Issue and the Proxy Server Solution
+This document explains the common CORS (Cross-Origin Resource Sharing) issue in web development and provides a professional, "backend" solution using a proxy server, which is the standard approach when browser extensions are not an option.
+
+3. What is CORS?
+CORS stands for Cross-Origin Resource Sharing. To understand it, you first need to know about the Same-Origin Policy.
+
+4. The Same-Origin Policy is a fundamental security feature built into all modern web browsers. It's a simple rule: a web page served from one origin (domain, protocol, and port) is not allowed to make requests to a different origin.
+
+Origin 1: https://your-app.com:443
+
+Origin 2: https://api.third-party.com:443
+
+When your React app (Origin 1) tries to fetch data from the Swiggy API (Origin 2), the browser sees this as a "cross-origin" request. By default, it blocks this request to prevent malicious websites from stealing your data or making unauthorized requests on your behalf.
+
+The API server can explicitly tell the browser that it's okay to accept requests from a different origin by sending a special header called Access-Control-Allow-Origin in its response. If the API doesn't send this header, the browser will block the response, and you get the dreaded CORS error.
+
+use CORS Allow Extension 
+
+With this setup, your React application will be able to successfully fetch data from the API without encountering any CORS errors, providing a robust and scalable solution for your project. This approach is standard practice in professional development and ensures your application works for all users, regardless of their browser settings or extensions.
+
+5. Why we have state variables => we have state variables to let know react when to update the UI, a normal javascript vriable when changed will not have capacity to update the UI or re-render it. This is why we have state variables and thus it is used to change the state. 
+
+6. const value cannot be changed but still we use const to create a atate variable for useState why so? => 
+
+The const Keyword in useState
+const in const [variable, setVariable] = useState() doesn't mean the variable's value can't change. It means the variable identifier cannot be re-assigned.
+
+How useState Works
+useState is a React Hook that provides a way to add state to functional components. When you call it, it returns an array with two elements:
+
+The current state value (variable).
+
+A function to update that state (setVariable).
+
+The Crucial Connection
+The apparent contradiction is resolved by understanding how React re-renders components.
+
+When you call setVariable(newValue):
+
+1. React doesn't change the value of the existing variable directly.
+
+2. Instead, it schedules the component to re-render.
+
+3. During this re-render, the useState() function is called again.
+
+4. This time, useState() returns a new array containing the updated value.
+
+5. The const [variable, setVariable] = ... line then de-structures this new array, effectively assigning the updated value to the variable identifier.
+
+Essentially, with each re-render, a new const variable is created. The const rule is never broken because you are not re-assigning the original variable; you are simply getting a new one with the updated value in each render cycle.
