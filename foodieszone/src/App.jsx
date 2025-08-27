@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client"; // Notice the /client for React 18+
 import "./index.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import RestaurantCard from "./components/RestaurantCard";
+import { createBrowserRouter } from "react-router-dom";
 
 
 // This is a way to pass inline CSS or even there is another way to pass this
@@ -23,6 +23,18 @@ const AppLayout = () => {
     </div>
   );
 };
+
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout/>
+  },
+  {
+    path: "/about"
+    
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);

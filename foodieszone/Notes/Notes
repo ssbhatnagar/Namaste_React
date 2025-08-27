@@ -95,14 +95,19 @@ The apparent contradiction is resolved by understanding how React re-renders com
 
 When you call setVariable(newValue):
 
-1. React doesn't change the value of the existing variable directly.
+A. React doesn't change the value of the existing variable directly.
 
-2. Instead, it schedules the component to re-render.
+B. Instead, it schedules the component to re-render.
 
-3. During this re-render, the useState() function is called again.
+C. During this re-render, the useState() function is called again.
 
-4. This time, useState() returns a new array containing the updated value.
+D. This time, useState() returns a new array containing the updated value.
 
-5. The const [variable, setVariable] = ... line then de-structures this new array, effectively assigning the updated value to the variable identifier.
+E. The const [variable, setVariable] = ... line then de-structures this new array, effectively assigning the updated value to the variable identifier.
 
 Essentially, with each re-render, a new const variable is created. The const rule is never broken because you are not re-assigning the original variable; you are simply getting a new one with the updated value in each render cycle.
+
+5. whenever the useEffect hook is used without passing dependency array it will be called after every render, 
+whenever useEffect is passed with empty array the it will only be called on intitial render just once ie when cpmponent renderd for the first time, if we pass anyting in array then it will be called only if there is a change in its value.
+
+6. state variables are never created outside the function, also provide all the useState hooks at the top of it
