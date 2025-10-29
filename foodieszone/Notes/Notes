@@ -111,3 +111,31 @@ Essentially, with each re-render, a new const variable is created. The const rul
 whenever useEffect is passed with empty array the it will only be called on intitial render just once ie when cpmponent renderd for the first time, if we pass anyting in array then it will be called only if there is a change in its value.
 
 6. state variables are never created outside the function, also provide all the useState hooks at the top of it
+
+7. there are different types of router provider for different scenarios we have used createBrowserRouter study more about other provider from official docs
+
+8. Can we use <a href = "" ></a> to define route to another page in case of react router ? ans - yes we ca use but we should not use anchor tag because it refreshes the whole page, where are using <Link to=""></Link> only redirects to that component without reloding the whole page
+
+9. There are two types of routing on web page: - 
+
+Server-side and client-side routing are two different methods for handling navigation in a web application. The key difference is where the logic for changing the page and its content resides—on the server or in the user's browser.
+
+
+* 9.1 Server-Side Routing
+Server-side routing is the traditional method where the server handles all navigation. When a user clicks a link or types a URL, the browser sends a request to the server. The server processes this request, finds the correct HTML file for that URL, and sends the entire new page back to the browser. This process causes a full page reload.
+
+How it works: Each new URL request is a round trip to the server.
+
+* Pros: Better for SEO because search engines can easily crawl and index individual pages. Faster initial load time since the browser only loads the required page content, not the entire application.
+
+* Cons: Slower transitions between pages due to full page reloads. This can lead to a "white flicker" and a less seamless user experience.
+
+
+* 9.2 Client-Side Routing
+Client-side routing is a more modern approach, typically used in Single-Page Applications (SPAs). In this model, the initial request to the server loads a single HTML file and all the necessary JavaScript. From that point on, navigation is handled by the browser's JavaScript. When a user clicks a link, the JavaScript intercepts the request, updates the URL using the browser's History API, and dynamically changes the content on the page without reloading the entire page.
+
+How it works: The browser's JavaScript handles all subsequent navigation after the initial load.
+
+* Pros: Provides a fast, smooth, and app-like user experience with no page reloads. Allows for seamless transitions and state preservation.
+
+* Cons: The initial page load can be slower because the browser has to download the entire application's code. Can be more complex to set up and manage. Might have some SEO challenges, though modern frameworks and tools have largely addressed this with server-side rendering (SSR) or static site generation (SSG)
